@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="game.css">
+</head>
+
+<body>
+
+    <!-- ********************* html ********************* -->
+
+    <h1><img src="Takuzu.png" style="width: 15%;"  ></h1>
+
+    <p id="intro">This is our version of the <a id="lien" href= "https://www.chiark.greenend.org.uk/~sgtatham/puzzles/js/unruly.html#6x6"> 
+        Takuzu</a> game that illustrates a 2-Dimensional grid with
+        options below. The objective of the game is to fill the entire
+     grid with asteroids and stars while respecting <a id="lien" href="#rules"> specific rules</a>.
+    </p>
+
+    <canvas id='mycanva'>
+        <button onclick="undo()" > Undo </button>
+    </canvas>
+
+    <ul>
+    <li><a> <button class = 'mybutton' onclick="undo()" > Undo </button>  
+            <button class = 'mybutton' onclick="redo()" > Redo </button>
+            <button class = 'mybutton' onclick="solve()" > Solve </button>  
+            <button class = 'mybutton' onclick="reset()" > Reset </button> 
+            <button class = 'mybutton' onclick="random()" > Random </button>
+    </a> </li>
+    </ul>
+
+    <ul id = 'dimensions'>
+    <li><a> <button class = 'mybutton' onclick="setDimensions(4,4)" > 4 x 4 </button>  
+            <button class = 'mybutton' onclick="setDimensions(6,6)" > 6 x 6 </button>
+            <button class = 'mybutton' onclick="setDimensions(8,8)" > 8 x 8 </button>  
+            <button class = 'mybutton' onclick="setDimensions(10,10)" > 10 x 10 </button> 
+    </a> </li>
+    </ul>
+
+    <hr>
+    <h2>Game Rules</h2>
+
+    <p id="rules">Fill the grid with either asteroids or stars, in such a way that: <br>
+        - no three consecutive squares, horizontally or vertically, are the same image<br>
+        - each row and column contains the same number of stars and asteroids.<br>
+        Left-click in an empty square to set an asteroid : <img class = 'icon' src="asteroide.png">  <br>
+        Click again to set a star : <img class = 'icon' src="etoile-filante.png">  <br>
+        Then click again to set an empty square.<br> </p>
+    <p> <strong> GOOD LUCK ! </strong>  </p>
+
+
+    <hr>
+    <p><em> zeyad.said-ali-cheikh@etu.u-bordeaux.fr, jonathan.landry@etu.u-bordeaux.fr and romain.wach@etu.u-bordeaux.fr <br> 2023.</em></p>
+
+    <!-- ********************* script ********************* -->
+
+    <script src="game.js"></script>
+    <script src="demo.js"> </script>
+
+</body>
+
+</html>

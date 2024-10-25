@@ -1,0 +1,15 @@
+.vscode/
+.vscode/ipch/*
+*.ipch
+html/
+build/
+*.o
+*.zip
+*.a
+CMakeCache.txt
+CMakeFiles/
+*~
+*.bak
+game_text
+game_test
+Testing/
